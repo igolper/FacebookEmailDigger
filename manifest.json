@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook E-mail Digger",
+  "description": "This extension will extract all e-mail in a group or group post page on Facebook",
+  "version": "1.0",
+  "author": "Igor Pereira (igolper)",
+  "icons": {"16": "icon.png"},
+
+"content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/groups*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "UI.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "downloads"
+   ]
+}
